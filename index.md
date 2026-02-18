@@ -15,7 +15,7 @@ Red Team | OT / ICS Security | EPC Cyber Governance | Mobile & Field Security
 
 ### Identity
 
-DAZ Sentinel is the cybersecurity division and specialist product line of **DAZ Consulting DS**.  
+DAZ Sentinel is the cybersecurity division and specialist service line of **DAZ Consulting DS**.  
 It integrates offensive security methodology with EPC delivery governance — to protect critical infrastructure across the full project lifecycle.
 
 ---
