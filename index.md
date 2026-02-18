@@ -3,36 +3,56 @@ layout: default
 title: DAZ Sentinel
 ---
 
-
 # DAZ Sentinel
 
-Red Team | OT Security | EPC Project Controls
+## Strategic Cybersecurity for Critical Infrastructure
+
+Red Team | Operational Technology | EPC Governance | Mobile Security
 
 ---
 
-## About
+### Positioning
 
-I operate at the intersection of large-scale EPC projects, Operational Technology (OT) security, Red Team methodologies, and mobile security.
+DAZ Sentinel operates at the convergence of:
 
-With 18 years of experience in industrial project execution, I now focus on securing critical infrastructure from design to commissioning.
+- Large-scale EPC megaprojects
+- Operational Technology (OT) environments
+- Adversarial Red Team methodologies
+- Field and mobile device security
 
----
-
-## Core Areas
-
-- Red Team & Offensive Security
-- OT / ICS Security
-- Mobile Security in Industrial Environments
-- EPC Project Controls & Governance
+The objective is clear:  
+embed cybersecurity into project governance before commissioning — not after incident.
 
 ---
 
-## Portfolio
+## Capabilities
 
-- [Writeups](writeups/)
-- [Articles](articles/)
-- [Progress Tracker](progress/)
+### Red Team Engagements
+Structured adversarial simulations aligned with MITRE ATT&CK and enterprise risk frameworks.
+
+### OT / ICS Security Advisory
+Threat modelling and segmentation risk assessment across:
+- FEED
+- Construction
+- Commissioning
+- Operational handover
+
+### EPC Cyber Governance
+Integration of cyber risk into:
+- Schedule control
+- Cost forecasting
+- Contract risk allocation
+
+---
+
+## Research & Publications
+
+- [Technical Writeups](writeups/)
+- [Executive Articles](articles/)
+- [Progress & Research Roadmap](progress/)
 - [Certifications](certifications/)
 - [Bug Bounty Framework](https://github.com/DAZDS/bugbounty-framework)
 
 ---
+
+*Security without structure is noise. Structure without security is risk.*
