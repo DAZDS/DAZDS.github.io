@@ -1,9 +1,55 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 
-<div class="container">
-  <div class="content-wrapper">
-    {{ content }}
-  </div>
-</div>
+    <meta name="description" content="{{ site.description | escape }}" />
+    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" />
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  </head>
+
+  <body class="daz">
+    <header class="daz-hero">
+      <div class="daz-shell">
+        <div class="daz-brand">
+          <div class="daz-brand-title">{{ site.title }}</div>
+          <div class="daz-brand-sub">{{ site.description }}</div>
+          <div class="daz-brand-note">A Division of DAZ Consulting DS</div>
+        </div>
+
+        <nav class="daz-nav" aria-label="Primary">
+          <a class="daz-nav-link" href="{{ '/' | relative_url }}">Home</a>
+          <a class="daz-nav-link" href="{{ '/services/' | relative_url }}">Services</a>
+          <a class="daz-nav-link" href="{{ '/writeups/' | relative_url }}">Writeups</a>
+          <a class="daz-nav-link" href="{{ '/articles/' | relative_url }}">Articles</a>
+          <a class="daz-nav-link" href="{{ '/certifications/' | relative_url }}">Certifications</a>
+          <a class="daz-nav-link" href="{{ '/contact/' | relative_url }}">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="daz-main">
+      <div class="daz-shell">
+        <article class="daz-page">
+          {% if page.title and page.url != "/" %}
+            <h1 class="daz-page-title">{{ page.title }}</h1>
+          {% endif %}
+          <div class="daz-content">
+            {{ content }}
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="daz-footer">
+      <div class="daz-shell">
+        <div class="daz-footer-line">
+          © {{ "now" | date: "%Y" }} DAZ Consulting DS · DAZ Sentinel
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
