@@ -69,5 +69,12 @@ Risk reduction for executive and field operations:
 
 ## Contact
 
-For inquiries, use the **Contact** page or email (add later).  
-Engagements are scoped to be **audit-defensible**, technically grounded, and aligned with industrial delivery realities.
+**DAZ Consulting**  
+Damian Stępień  
+Founder | DAZ Sentinel  
+
+NIP: 7491919844  
+REGON: 242890153  
+
+Direct: +48 517 776 202  
+Email: d.stepien@me.com
