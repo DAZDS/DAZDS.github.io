@@ -6,3 +6,11 @@ url: "https://DAZDS.github.io"
 theme: minima
 markdown: kramdown
 permalink: /:categories/:title/
+header_pages:
+  - _pages/about.md
+  - _pages/portfolio.md
+  - writeups/README.md
+  - articles/README.md
+  - progress/README.md
+  - certifications/README.md
+  - _pages/contact.md
