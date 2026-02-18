@@ -1,25 +1,23 @@
 title: DAZ Sentinel
 description: Red Team | OT Security | Critical Infrastructure | EPC Project Controls
 author: Damian Stępień
+
 baseurl: ""
 url: "https://dazds.github.io"
-theme: jekyll-theme-cayman
+
 markdown: kramdown
 permalink: /:categories/:title/
 
+# render pages from _pages (because it starts with underscore)
+include:
+  - _pages
+
+# navigation files (optional if you use custom nav in default.html, but ok to keep)
 header_pages:
   - _pages/services.md
   - _pages/about.md
   - writeups/README.md
   - articles/README.md
-  - progress/README.md
   - certifications/README.md
+  - progress/README.md
   - _pages/contact.md
-
-include:
-  - _pages
-  - articles
-  - assets
-  - certifications
-  - progress
-  - writeups
