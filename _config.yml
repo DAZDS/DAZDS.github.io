@@ -1,0 +1,8 @@
+title: DAZ Sentinel
+description: Red Team | OT Security | EPC Project Controls
+author: Damian Stępień
+baseurl: ""
+url: "https://DAZDS.github.io"
+theme: minima
+markdown: kramdown
+permalink: /:categories/:title/
