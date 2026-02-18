@@ -1,60 +1,173 @@
 ---
 ---
 
-$header-bg-color: #0f1a26;
-$header-bg-color-secondary: #1b2a3a;
-$section-headings-color: #1b2a3a;
+/* ========= Design Tokens ========= */
+:root {
+  --bg: #0b1220;
+  --bg2: #0f1a2e;
+  --paper: #ffffff;
+  --ink: #0b1220;
+  --muted: #4b5563;
+  --line: #e5e7eb;
 
-@import "jekyll-theme-cayman";
+  --accent: #1b2a3a;     /* executive steel-blue */
+  --accent2: #0f1a26;    /* deeper */
+  --link: #0f3d7a;
 
-/* ===== Typography ===== */
-
-body {
-  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-  background-color: #f4f6f8;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.10);
+  --max: 1120px;
 }
 
-h1, h2, h3 {
-  font-weight: 600;
-  letter-spacing: 0.5px;
+/* ========= Base ========= */
+.daz {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  color: var(--ink);
+  background: #f4f6f8;
+  line-height: 1.65;
 }
 
-/* ===== Hero Section ===== */
-
-.page-header {
-  background: linear-gradient(135deg, #0f1a26, #1b2a3a);
-  border-bottom: 4px solid #0a121c;
+.daz-shell {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* ===== Content Width ===== */
-
-.main-content {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
+/* ========= Hero / Header ========= */
+.daz-hero {
+  background: radial-gradient(900px 500px at 15% 20%, rgba(255,255,255,.06), transparent 60%),
+              linear-gradient(135deg, var(--bg), var(--bg2));
+  color: #fff;
+  padding: 34px 0 22px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
 }
 
-/* ===== Section Styling ===== */
-
-h2 {
-  margin-top: 50px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #1b2a3a;
+.daz-brand-title {
+  font-size: 30px;
+  font-weight: 650;
+  letter-spacing: .3px;
 }
 
-/* ===== Executive Tone ===== */
-
-strong {
-  color: #0f1a26;
+.daz-brand-sub {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: .85;
 }
 
-ul {
-  line-height: 1.8;
+.daz-brand-note {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: .70;
+  letter-spacing: .3px;
+  text-transform: uppercase;
 }
 
-/* ===== Footer Clean ===== */
+/* ========= Navigation ========= */
+.daz-nav {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
-.site-footer {
-  font-size: 0.9rem;
-  opacity: 0.8;
+.daz-nav-link {
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+}
+
+.daz-nav-link:hover {
+  color: #fff;
+  border-color: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.06);
+}
+
+/* ========= Main ========= */
+.daz-main {
+  padding: 28px 0 60px;
+}
+
+.daz-page {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 34px 34px 26px;
+}
+
+.daz-page-title {
+  margin: 0 0 18px 0;
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: .2px;
+}
+
+.daz-content p {
+  color: #111827;
+}
+
+.daz-content a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(15,61,122,.25);
+}
+
+.daz-content a:hover {
+  border-bottom-color: rgba(15,61,122,.55);
+}
+
+/* ========= Typography ========= */
+.daz-content h2 {
+  margin-top: 28px;
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: .2px;
+}
+
+.daz-content hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 22px 0;
+}
+
+.daz-content ul {
+  padding-left: 18px;
+}
+
+/* ========= Components (for later, used everywhere) ========= */
+.daz-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.daz-card {
+  grid-column: span 12;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 18px 14px;
+  background: #fff;
+}
+
+@media (min-width: 980px) {
+  .daz-card--6 { grid-column: span 6; }
+  .daz-card--4 { grid-column: span 4; }
+}
+
+/* ========= Footer ========= */
+.daz-footer {
+  padding: 22px 0;
+  color: rgba(255,255,255,.75);
+  background: linear-gradient(135deg, var(--bg), var(--bg2));
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+
+.daz-footer-line {
+  font-size: 12px;
+  letter-spacing: .2px;
 }
