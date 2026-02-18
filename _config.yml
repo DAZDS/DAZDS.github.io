@@ -15,3 +15,11 @@ header_pages:
   - progress/README.md
   - certifications/README.md
   - _pages/contact.md
+
+include:
+  - _pages
+  - articles
+  - assets
+  - certifications
+  - progress
+  - writeups
