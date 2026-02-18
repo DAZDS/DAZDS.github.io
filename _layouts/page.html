@@ -10,38 +10,37 @@
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 
-    <div class="daz-brand-row">
-  <img src="{{ 'Logo_DAZ_WWW.png' | relative_url }}" 
-       alt="DAZ Sentinel Logo" 
-       class="daz-logo">
-  <div class="daz-brand-text">
-    <div class="daz-brand-title">{{ site.title }}</div>
-    <div class="daz-brand-sub">{{ site.description }}</div>
-    <div class="daz-brand-note">A Division of DAZ Consulting DS</div>
-  </div>
-</div>
+    
 
   </head>
 
   <body class="daz">
-    <header class="daz-hero">
-      <div class="daz-shell">
-        <div class="daz-brand">
+  <header class="daz-hero">
+    <div class="daz-shell">
+      
+      <div class="daz-brand-row">
+        <img src="{{ '/Logo_DAZ_WWW.png' | relative_url }}" 
+             alt="DAZ Sentinel Logo" 
+             class="daz-logo">
+        <div class="daz-brand-text">
           <div class="daz-brand-title">{{ site.title }}</div>
           <div class="daz-brand-sub">{{ site.description }}</div>
           <div class="daz-brand-note">A Division of DAZ Consulting DS</div>
         </div>
-
-        <nav class="daz-nav" aria-label="Primary">
-          <a class="daz-nav-link" href="{{ '/' | relative_url }}">Home</a>
-          <a class="daz-nav-link" href="{{ '/services/' | relative_url }}">Services</a>
-          <a class="daz-nav-link" href="{{ '/writeups/' | relative_url }}">Writeups</a>
-          <a class="daz-nav-link" href="{{ '/articles/' | relative_url }}">Articles</a>
-          <a class="daz-nav-link" href="{{ '/certifications/' | relative_url }}">Certifications</a>
-          <a class="daz-nav-link" href="{{ '/contact/' | relative_url }}">Contact</a>
-        </nav>
       </div>
-    </header>
+  
+      <nav class="daz-nav" aria-label="Primary">
+        <a class="daz-nav-link" href="{{ '/' | relative_url }}">Home</a>
+        <a class="daz-nav-link" href="{{ '/services/' | relative_url }}">Services</a>
+        <a class="daz-nav-link" href="{{ '/writeups/' | relative_url }}">Writeups</a>
+        <a class="daz-nav-link" href="{{ '/articles/' | relative_url }}">Articles</a>
+        <a class="daz-nav-link" href="{{ '/certifications/' | relative_url }}">Certifications</a>
+        <a class="daz-nav-link" href="{{ '/contact/' | relative_url }}">Contact</a>
+      </nav>
+  
+    </div>
+  </header>
+
 
     <main class="daz-main">
       <div class="daz-shell">
