@@ -221,3 +221,23 @@ body.daz {
     padding: 20px;
   }
 }
+
+/* ============================= */
+/* DAZ LOGO – PROFESSIONAL SIZE */
+/* ============================= */
+
+.daz-logo {
+  width: 72px;              /* desktop */
+  height: auto;
+  margin-right: 18px;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .daz-logo {
+    width: 88px;            /* większe na telefonie */
+    margin-bottom: 12px;
+  }
+}
