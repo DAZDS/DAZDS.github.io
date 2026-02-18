@@ -1,7 +1,8 @@
 ---
-layout: home
-title: Home
+layout: default
+title: DAZ Sentinel
 ---
+
 
 # DAZ Sentinel
 
