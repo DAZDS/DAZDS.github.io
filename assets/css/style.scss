@@ -226,18 +226,18 @@ body.daz {
 /* DAZ LOGO – PROFESSIONAL SIZE */
 /* ============================= */
 
-.daz-logo {
-  width: 72px;              /* desktop */
-  height: auto;
-  margin-right: 18px;
+/* Header logo (compact, but readable) */
+.daz-logo{
+  height: 64px;     /* <- tu realnie powiększasz */
+  width: auto;
   display: block;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+  opacity: .95;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.28));
 }
 
-/* Mobile adjustment */
-@media (max-width: 768px) {
-  .daz-logo {
-    width: 88px;            /* większe na telefonie */
-    margin-bottom: 12px;
+/* Mobile – bigger */
+@media (max-width: 768px){
+  .daz-logo{
+    height: 92px;   /* <- na telefonie ma być wyraźne */
   }
 }
