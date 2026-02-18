@@ -171,3 +171,20 @@
   font-size: 12px;
   letter-spacing: .2px;
 }
+
+.daz-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.daz-logo {
+  width: 48px;
+  height: auto;
+  display: block;
+}
+
+.daz-brand-text {
+  display: flex;
+  flex-direction: column;
+}
