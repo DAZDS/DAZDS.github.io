@@ -5,54 +5,63 @@ title: DAZ Sentinel
 
 # DAZ Sentinel
 
-## Strategic Cybersecurity for Critical Infrastructure
+## Cybersecurity Division of DAZ Consulting DS
 
-Red Team | Operational Technology | EPC Governance | Mobile Security
+**Critical Infrastructure Security for Energy, Petrochemicals and Industrial EPC**
 
----
-
-### Positioning
-
-DAZ Sentinel operates at the convergence of:
-
-- Large-scale EPC megaprojects
-- Operational Technology (OT) environments
-- Adversarial Red Team methodologies
-- Field and mobile device security
-
-The objective is clear:  
-embed cybersecurity into project governance before commissioning — not after incident.
+Red Team | OT / ICS Security | EPC Cyber Governance | Mobile & Field Security
 
 ---
 
-## Capabilities
+### Identity
 
-### Red Team Engagements
-Structured adversarial simulations aligned with MITRE ATT&CK and enterprise risk frameworks.
+DAZ Sentinel is the cybersecurity division and specialist product line of **DAZ Consulting DS**.  
+It integrates offensive security methodology with EPC delivery governance — to protect critical infrastructure across the full project lifecycle.
 
-### OT / ICS Security Advisory
-Threat modelling and segmentation risk assessment across:
-- FEED
-- Construction
-- Commissioning
-- Operational handover
+---
+
+## Strategic Focus
+
+### OT / ICS Security in Energy & Petrochemicals
+Security assurance for industrial environments where downtime, safety and integrity are non-negotiable:
+- segregation and zoning risk analysis (IT/OT boundary)
+- temporary infrastructure exposure during construction and commissioning
+- contractor access governance and asset visibility
+
+### Red Team Methodology for Hybrid IT/OT
+Adversarial simulations designed to measure realistic exposure:
+- attack surface analysis and pathway modelling
+- MITRE ATT&CK mapping (enterprise + ICS where applicable)
+- findings translated into engineering controls and governance actions
 
 ### EPC Cyber Governance
-Integration of cyber risk into:
-- Schedule control
-- Cost forecasting
-- Contract risk allocation
+Cyber risk integrated into project control discipline:
+- schedule and critical path risk factors
+- cost integrity and forecasting implications
+- contractual allocation of cyber responsibilities across EPC packages
+
+### Mobile & Field Security on Industrial Sites
+Industrial reality: smartphones, tablets, radios, temporary networks.
+- field-device exposure assessment
+- access token / identity hygiene
+- operational constraints and pragmatic controls
 
 ---
 
-## Research & Publications
+## Publications & Work Products
 
+- [Services](services/)
 - [Technical Writeups](writeups/)
 - [Executive Articles](articles/)
 - [Progress & Research Roadmap](progress/)
 - [Certifications](certifications/)
-- [Bug Bounty Framework](https://github.com/DAZDS/bugbounty-framework)
+
+**Flagship Tooling**
+- [Bug Bounty Framework (DAZDS)](https://github.com/DAZDS/bugbounty-framework)
 
 ---
 
-*Security without structure is noise. Structure without security is risk.*
+## Operating Principle
+
+Industrial security is not a checklist.  
+It is an engineering discipline embedded into governance — before commissioning.
