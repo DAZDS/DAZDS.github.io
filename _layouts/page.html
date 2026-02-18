@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      {% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}
-    </title>
+
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 
     <meta name="description" content="{{ site.description | escape }}" />
     <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" />
@@ -15,11 +14,13 @@
   <body class="daz">
     <header class="daz-hero">
       <div class="daz-shell">
+        <!-- Brand row (logo + text) -->
         <div class="daz-brand-row">
           <img
             src="{{ '/Logo_DAZ_WWW.png' | relative_url }}"
-            alt="DAZ Sentinel Logo"
+            alt="DAZ Sentinel"
             class="daz-logo"
+            loading="eager"
           />
 
           <div class="daz-brand-text">
@@ -29,6 +30,7 @@
           </div>
         </div>
 
+        <!-- Primary nav -->
         <nav class="daz-nav" aria-label="Primary">
           <a class="daz-nav-link" href="{{ '/' | relative_url }}">Home</a>
           <a class="daz-nav-link" href="{{ '/services/' | relative_url }}">Services</a>
