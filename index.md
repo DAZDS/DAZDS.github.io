@@ -63,5 +63,5 @@ Industrial reality: smartphones, tablets, radios, temporary networks.
 
 ## Operating Principle
 
-Industrial security is not a checklist.  
-It is an engineering discipline embedded into governance — before commissioning.
+Industrial security is not a checklist.
+It is an engineering discipline embedded into governance — defined before commissioning and built to endure long after production begins.
