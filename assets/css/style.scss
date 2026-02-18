@@ -1,95 +1,157 @@
 ---
 ---
 
-/* ========= Design Tokens ========= */
+/* =============================
+   DAZ Sentinel – Executive UI
+   ============================= */
+
+/* ---- Design tokens ---- */
 :root {
   --bg: #0b1220;
   --bg2: #0f1a2e;
   --paper: #ffffff;
+
   --ink: #0b1220;
+  --text: #0f172a;
   --muted: #4b5563;
   --line: #e5e7eb;
 
-  --accent: #1b2a3a;     /* executive steel-blue */
-  --accent2: #0f1a26;    /* deeper */
-  --link: #0f3d7a;
+  --navText: rgba(203, 214, 238, 0.9);
+  --navTextStrong: #ffffff;
 
   --radius: 16px;
   --shadow: 0 10px 30px rgba(0,0,0,.10);
+
   --max: 1120px;
 }
 
-/* ========= Base ========= */
-.daz {
+/* ---- Base ---- */
+html, body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-  color: var(--ink);
-  background: #f4f6f8;
-  line-height: 1.65;
+  padding: 0;
 }
 
+body.daz {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: #f3f4f6;
+  line-height: 1.55;
+}
+
+/* Layout container */
 .daz-shell {
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ========= Hero / Header ========= */
+/* ---- HERO (Home only) ---- */
 .daz-hero {
-  background: radial-gradient(900px 500px at 15% 20%, rgba(255,255,255,.06), transparent 60%),
-              linear-gradient(135deg, var(--bg), var(--bg2));
-  color: #fff;
-  padding: 34px 0 22px;
-  border-bottom: 1px solid rgba(255,255,255,.10);
+  background:
+    radial-gradient(1200px 600px at 60% 35%, rgba(255,255,255,0.10), rgba(0,0,0,0)),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 56px 0 18px;
+
+  /* IMPORTANT: kill any old giant rules */
+  min-height: unset !important;
+}
+
+.daz-hero-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.daz-hero-logo {
+  height: 110px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.25));
+}
+
+.daz-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ---- COMPACT HEADER (pages) ---- */
+.daz-header {
+  background: var(--bg);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 18px 0 12px;
+
+  min-height: unset !important;
+}
+
+.daz-header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.daz-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.daz-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
 }
 
 .daz-brand-title {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 650;
-  letter-spacing: .3px;
+  color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
 .daz-brand-sub {
-  margin-top: 6px;
-  font-size: 14px;
-  opacity: .85;
+  font-size: 13px;
+  color: rgba(203, 214, 238, 0.85);
 }
 
 .daz-brand-note {
-  margin-top: 6px;
-  font-size: 12px;
-  opacity: .70;
-  letter-spacing: .3px;
+  font-size: 11px;
+  color: rgba(203, 214, 238, 0.55);
   text-transform: uppercase;
+  letter-spacing: 0.10em;
 }
 
-/* ========= Navigation ========= */
+/* ---- Navigation ---- */
 .daz-nav {
-  margin-top: 18px;
   display: flex;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-.daz-nav-link {
-  color: rgba(255,255,255,.85);
+.daz-nav a {
+  color: var(--navText);
   text-decoration: none;
   font-size: 13px;
-  padding: 7px 10px;
+  padding: 8px 10px;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
 }
 
-.daz-nav-link:hover {
-  color: #fff;
-  border-color: rgba(255,255,255,.25);
-  background: rgba(255,255,255,.06);
+.daz-nav a:hover {
+  color: var(--navTextStrong);
+  border-color: rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
 }
 
-/* ========= Main ========= */
+/* ---- Main content card ---- */
 .daz-main {
-  padding: 28px 0 60px;
+  padding: 28px 0 56px;
 }
 
 .daz-page {
@@ -97,94 +159,65 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 34px 34px 26px;
+  padding: 28px 28px;
 }
 
 .daz-page-title {
-  margin: 0 0 18px 0;
+  margin: 0 0 16px 0;
   font-size: 24px;
-  font-weight: 650;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 
-.daz-content p {
+.daz-content {
+  font-size: 15px;
   color: #111827;
 }
 
-.daz-content a {
-  color: var(--link);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(15,61,122,.25);
-}
-
-.daz-content a:hover {
-  border-bottom-color: rgba(15,61,122,.55);
-}
-
-/* ========= Typography ========= */
 .daz-content h2 {
-  margin-top: 28px;
-  font-size: 18px;
-  font-weight: 650;
-  letter-spacing: .2px;
+  margin-top: 26px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.daz-content h3 {
+  margin-top: 18px;
 }
 
 .daz-content hr {
-  border: 0;
+  border: none;
   border-top: 1px solid var(--line);
   margin: 22px 0;
 }
 
 .daz-content ul {
-  padding-left: 18px;
+  margin: 10px 0 18px 18px;
 }
 
-/* ========= Components (for later, used everywhere) ========= */
-.daz-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+.daz-content li {
+  margin: 6px 0;
 }
 
-.daz-card {
-  grid-column: span 12;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 18px 18px 14px;
-  background: #fff;
-}
-
-@media (min-width: 980px) {
-  .daz-card--6 { grid-column: span 6; }
-  .daz-card--4 { grid-column: span 4; }
-}
-
-/* ========= Footer ========= */
+/* ---- Footer ---- */
 .daz-footer {
-  padding: 22px 0;
-  color: rgba(255,255,255,.75);
-  background: linear-gradient(135deg, var(--bg), var(--bg2));
-  border-top: 1px solid rgba(255,255,255,.10);
+  padding: 20px 0 40px;
+  color: #6b7280;
+  font-size: 13px;
 }
 
 .daz-footer-line {
-  font-size: 12px;
-  letter-spacing: .2px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 14px;
 }
 
-.daz-brand-row {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.daz-logo {
-  width: 48px;
-  height: auto;
-  display: block;
-}
-
-.daz-brand-text {
-  display: flex;
-  flex-direction: column;
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .daz-hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .daz-hero-logo {
+    height: 90px;
+  }
+  .daz-page {
+    padding: 20px;
+  }
 }
