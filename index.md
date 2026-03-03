@@ -1,80 +1,82 @@
 ---
 layout: page
-title: Home
+title: DAZ Consulting DS
+permalink: /
 ---
 
-## Identity
+# DAZ Consulting DS  
+## Strategic Industrial Advisory
 
-**DAZ Sentinel** is the cybersecurity division and specialist service line of **DAZ Consulting DS**.  
-We operate at the intersection of **industrial EPC delivery**, **OT/ICS environments**, and **adversarial security** — where downtime, safety, and integrity are non-negotiable.
+Engineering governance, risk control and cybersecurity into critical infrastructure delivery.
 
-> **Industrial security is not a checklist.**  
-> **It is engineered into governance before commissioning — and sustained through every year of production.**
+---
+
+## About the Firm
+
+DAZ Consulting DS is an independent advisory practice operating at the intersection of industrial EPC delivery, project controls discipline, and cybersecurity governance.
+
+We work in environments where schedule integrity, operational continuity and asset protection define business survival.
+
+Our focus is not on checklists.  
+It is on embedding control structures that endure beyond commissioning and remain defensible under audit, dispute, or crisis.
 
 ---
 
 ## Strategic Focus
 
-### Critical Infrastructure Security for Energy, Petrochemicals & Industrial EPC
+### Industrial EPC Governance  
+Integration of risk management and control structures across engineering, procurement and construction programmes.
 
-DAZ Sentinel focuses on industrial environments where **operational continuity**, **process safety**, and **asset integrity** define risk — and where cyber exposure is often introduced long before operations begin (engineering, vendors, temporary networks, contractors).
+### Project Controls & Risk Integrity  
+Schedule governance, cost discipline, critical path risk, and defensibility of delivery data.
 
-**Typical objectives**
-- Reduce real attack surface across **hybrid IT/OT** boundaries
-- Establish **governance that survives handover** (not “project-only controls”)
-- Make security measurable: **exposure → controls → verification → operating discipline**
+### OT / ICS Lifecycle Security  
+Security assurance engineered from FEED through commissioning and into operational environments.
 
----
-
-## Core Service Lines
-
-### OT / ICS Security Advisory (Lifecycle)
-
-Security assurance across the full project and operating lifecycle:
-- **FEED / Design**: zoning, trust boundaries, secure architecture requirements  
-- **Construction & Commissioning**: temporary infrastructure exposure, contractor access governance  
-- **Handover & Operations**: visibility, patching reality, remote access discipline, monitoring foundations
-
-### Red Team for Hybrid IT/OT
-
-Structured adversarial simulations designed for industrial reality:
-- attack surface and pathway modelling (IT/OT boundary)
-- MITRE ATT&CK mapping (enterprise + ICS where applicable)
-- findings translated into **engineering controls** and **governance actions**
-
-### EPC Cyber Governance
-
-Cyber risk integrated into project control discipline:
-- schedule governance and critical-path risk factors
-- cost integrity / forecasting implications of cyber events
-- contractual risk allocation and responsibility model (Owner / EPC / Vendors)
-
-### Mobile & Field Security
-
-Risk reduction for executive and field operations:
-- device hardening and secure workflows
-- contractor access vectors and temporary site connectivity
-- exposure reduction for travel and on-site operations
+### Adversarial Verification — DAZ Sentinel Division  
+Independent validation of exposure across hybrid IT/OT environments, translating findings into enforceable engineering and governance controls.
 
 ---
 
-## How Engagements Run
+## Engagement Structure
 
-1) **Executive framing (risk & business impact)**  
-2) **Engineering discovery (architecture & exposure)**  
-3) **Verification (what is true, not what is declared)**  
-4) **Governance embedding (controls that persist after handover)**
+DAZ Consulting DS structures engagements through a four-stage model:
+
+1. **Executive Framing** — definition of business-critical risk exposure  
+2. **Engineering Discovery** — architecture, controls and structural vulnerabilities  
+3. **Independent Verification** — validation of what is true, not what is declared  
+4. **Governance Embedding** — controls designed to persist beyond project closure  
+
+This model ensures continuity between advisory insight and operational reality.
+
+---
+
+## Operating Environments
+
+Energy & Power  
+Petrochemicals  
+Industrial EPC  
+Critical Infrastructure Modernisation  
+
+---
+
+## Institutional Position
+
+DAZ Consulting DS operates as a strategic advisory practice.  
+DAZ Sentinel functions as its specialist cybersecurity division.
+
+All services are delivered within a governance-first framework designed for environments where downtime, safety and integrity are non-negotiable.
 
 ---
 
 ## Contact
 
-**DAZ Consulting**  
+**DAZ Consulting DS**  
 Damian Stępień  
-Founder | DAZ Sentinel  
+Founder  
 
 NIP: 7491919844  
 REGON: 242890153  
 
 Direct: +48 517 776 202  
-Email: d.stepien@me.com
+Email: damian.stepien@dazconsultingds.com
