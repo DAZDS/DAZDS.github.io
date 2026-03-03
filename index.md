@@ -7,8 +7,7 @@ permalink: /
 # DAZ Consulting DS  
 ## Strategic Industrial Advisory
 
-Engineering governance, risk control and cybersecurity into critical infrastructure delivery.
-
+Strategic Advisory for Industrial EPC Execution and Risk Control
 ---
 
 ## About the Firm
