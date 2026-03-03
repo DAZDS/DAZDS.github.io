@@ -1,70 +1,64 @@
-<!DOCTYPE html>
+<!-- =======================================================
+     File: _layouts/page.html
+     ======================================================= -->
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    </title>
 
-    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-
-    <meta name="description" content="{{ site.description | escape }}" />
-    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   </head>
 
-  <body class="daz">
-    <header class="daz-hero">
-      <div class="daz-shell">
-        <!-- Brand row (logo + text) -->
-        <div class="daz-brand-row">
-          <img
-            src="{{ '/Logo_DAZ_WWW.png' | relative_url }}"
-            alt="DAZDS"
-            class="daz-logo"
-            loading="eager"
-          />
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand-row">
+          <div class="brand-mark">
+            <!-- Jeśli masz logo w repo, podmień ścieżkę -->
+            <img src="{{ '/Logo_DAZ_WWW.png' | relative_url }}" alt="DAZ" />
+          </div>
 
-          <div class="daz-brand-text">
-            <div class="daz-brand-title">{{ site.title }}</div>
-            <div class="daz-brand-sub">{{ site.description }}</div>
-            <div class="daz-brand-note"> with DAZ Sentinel as its cybersecurity division</div>
+          <div class="brand-titles">
+            <p class="brand-name">DAZ Consulting DS</p>
+            <p class="brand-sub">
+              Industrial EPC Advisory | Project Controls
+              <span style="opacity:.65;">&nbsp;·&nbsp;</span>
+              DAZ Sentinel — Cybersecurity Division
+            </p>
           </div>
         </div>
 
-        <!-- Primary nav -->
-        <nav class="daz-nav" aria-label="Primary">
-          <a class="daz-nav-link" href="{{ '/' | relative_url }}">Home</a>
-          <a class="daz-nav-link" href="{{ '/services/' | relative_url }}">Services</a>
-          <a class="daz-nav-link" href="{{ '/writeups/' | relative_url }}">Writeups</a>
-          <a class="daz-nav-link" href="{{ '/articles/' | relative_url }}">Articles</a>
-          <a class="daz-nav-link" href="{{ '/certifications/' | relative_url }}">Certifications</a>
-          <a class="daz-nav-link" href="{{ '/contact/' | relative_url }}">Contact</a>
-        </nav>
+        <div class="nav-row">
+          <nav class="nav">
+            {% assign url = page.url | downcase %}
+            <a href="{{ '/' | relative_url }}" class="{% if url == '/' %}active{% endif %}">Home</a>
+            <a href="{{ '/services/' | relative_url }}" class="{% if url contains '/services' %}active{% endif %}">Services</a>
+            <a href="{{ '/writeups/' | relative_url }}" class="{% if url contains '/writeups' %}active{% endif %}">Writeups</a>
+            <a href="{{ '/articles/' | relative_url }}" class="{% if url contains '/articles' %}active{% endif %}">Articles</a>
+            <a href="{{ '/certifications/' | relative_url }}" class="{% if url contains '/certifications' %}active{% endif %}">Certifications</a>
+            <a href="{{ '/contact/' | relative_url }}" class="{% if url contains '/contact' %}active{% endif %}">Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="daz-main">
-      <div class="daz-shell">
-        <article class="daz-page">
-          {% if page.title and page.url != "/" %}
-            <h1 class="daz-page-title">{{ page.title }}</h1>
-          {% endif %}
-          <div class="daz-content">
-            {{ content }}
-          </div>
-        </article>
+    <main class="site-main dots-bg">
+      <div class="container page-surface">
+        <div class="page">
+          {{ content }}
+        </div>
       </div>
     </main>
 
-    <footer class="daz-footer">
-      <div class="daz-shell">
-        <div class="daz-footer-line">
-          © {{ "now" | date: "%Y" }} DAZ Consulting · DAZ Sentinel
-        </div>
-    
-        <div class="daz-footer-contact">
-          DAZ Consulting – Damian Stępień<br>
-          NIP: 7491919844 · REGON: 242890153<br>
-          +48 517 776 202 · damian.stepien@dazconsultingds.com/
+    <footer class="site-footer">
+      <div class="container">
+        <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;">
+          <div>© {{ "now" | date: "%Y" }} DAZ Consulting DS · DAZ Sentinel</div>
+          <div class="muted">damian.stepien@dazconsultingds.com</div>
         </div>
       </div>
     </footer>
