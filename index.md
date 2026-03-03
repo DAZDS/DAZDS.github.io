@@ -79,10 +79,14 @@ Advisory engagements follow a lifecycle-based control structure consistent with 
 
 ## Operating Environments
 
-Energy & Power  
-Petrochemical & Refining  
-Industrial Manufacturing  
-Infrastructure Modernisation  
+- Energy and power generation  
+- Petrochemical and refining facilities  
+- Mining and mineral processing operations  
+- Pharmaceutical manufacturing facilities  
+- Industrial production plants  
+- Infrastructure development and modernisation programmes  
+- Commercial and residential development projects  
+- Public and civic infrastructure  
 
 ---
 
