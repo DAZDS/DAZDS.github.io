@@ -6,7 +6,7 @@ permalink: /about/
 
 # About
 
-Damian Stępień  
-Red Team | OT Security | EPC Project Controls
+Damian A. Stępień  
+PMC EPC | Red Team | OT Security | 
 
-My focus is securing critical infrastructure by combining offensive security expertise with decades of EPC project execution experience.
+Independent advisory practice providing project management consultancy (PMC) and project controls oversight across the full lifecycle of industrial EPC programmes.
