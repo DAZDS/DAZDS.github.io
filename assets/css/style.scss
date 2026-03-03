@@ -1,243 +1,399 @@
----
----
+/* =========================================================
+   DAZ Consulting DS — Corporate (CEPS-like) Jekyll Theme
+   File: assets/css/style.scss
+   ========================================================= */
 
-/* =============================
-   DAZ Sentinel – Executive UI
-   ============================= */
-
-/* ---- Design tokens ---- */
 :root {
   --bg: #0b1220;
-  --bg2: #0f1a2e;
+  --bg-2: #0e172a;
   --paper: #ffffff;
-
-  --ink: #0b1220;
   --text: #0f172a;
-  --muted: #4b5563;
-  --line: #e5e7eb;
+  --muted: #475569;
+  --line: rgba(15, 23, 42, 0.12);
 
-  --navText: rgba(203, 214, 238, 0.9);
-  --navTextStrong: #ffffff;
+  --brand: #2b6cff;        /* corporate blue */
+  --brand-2: #0ea5e9;
 
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0,0,0,.10);
+  --nav-bg: radial-gradient(1200px 600px at 30% 20%, rgba(43,108,255,0.25), transparent 60%),
+            radial-gradient(900px 500px at 70% 10%, rgba(14,165,233,0.18), transparent 60%),
+            linear-gradient(180deg, #0b1220 0%, #0e172a 100%);
 
-  --max: 1120px;
+  --radius: 14px;
+  --shadow: 0 10px 40px rgba(2, 6, 23, 0.25);
+
+  --container: 1240px;
+  --gutter: 24px;
 }
 
-/* ---- Base ---- */
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-body.daz {
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
-  background: #f3f4f6;
+  background: #f5f7fb;
   line-height: 1.55;
 }
 
-/* Layout container */
-.daz-shell {
-  max-width: var(--max);
+/* Links */
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* =========================================================
+   Layout containers
+   ========================================================= */
+.container {
+  max-width: var(--container);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--gutter);
 }
 
-/* ---- HERO (Home only) ---- */
-.daz-hero {
-  background:
-    radial-gradient(1200px 600px at 60% 35%, rgba(255,255,255,0.10), rgba(0,0,0,0)),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 56px 0 18px;
-
-  /* IMPORTANT: kill any old giant rules */
-  min-height: unset !important;
+.site-header {
+  background: var(--nav-bg);
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(148,163,184,0.12);
 }
 
-.daz-hero-inner {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 22px;
-  align-items: center;
+.header-inner {
+  padding: 26px 0 22px 0;
 }
 
-.daz-hero-logo {
-  height: 110px;
-  width: auto;
-  display: block;
-  opacity: 0.95;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,.25));
-}
-
-.daz-hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* ---- COMPACT HEADER (pages) ---- */
-.daz-header {
-  background: var(--bg);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 18px 0 12px;
-
-  min-height: unset !important;
-}
-
-.daz-header-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.daz-brand-row {
+.brand-row {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.daz-logo {
-  height: 44px;
-  width: auto;
-  display: block;
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(8px);
+}
+
+.brand-mark img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
   opacity: 0.95;
 }
 
-.daz-brand-title {
-  font-size: 22px;
-  font-weight: 650;
-  color: #ffffff;
+.brand-titles .brand-name {
+  font-weight: 700;
   letter-spacing: 0.2px;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.2;
 }
 
-.daz-brand-sub {
+.brand-titles .brand-sub {
+  margin: 3px 0 0 0;
   font-size: 13px;
-  color: rgba(203, 214, 238, 0.85);
+  color: rgba(226,232,240,0.80);
 }
 
-.daz-brand-note {
-  font-size: 11px;
-  color: rgba(203, 214, 238, 0.55);
+.nav-row {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: rgba(226,232,240,0.92);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+  font-size: 14px;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.nav a.active {
+  background: rgba(43,108,255,0.22);
+  border-color: rgba(43,108,255,0.35);
+}
+
+/* Main area */
+.site-main {
+  padding: 28px 0 70px 0;
+}
+
+/* =========================================================
+   “CEPS-like” page frame — NO card, full width sections
+   ========================================================= */
+.page-surface {
+  background: transparent;
+}
+
+/* A subtle dotted background like CEPS */
+.dots-bg {
+  position: relative;
+}
+.dots-bg::before {
+  content: "";
+  position: absolute;
+  inset: -40px 0 auto 0;
+  height: 520px;
+  background-image:
+    radial-gradient(rgba(15,23,42,0.10) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+h1, h2, h3 { margin: 0 0 14px 0; letter-spacing: -0.2px; }
+h1 { font-size: 44px; line-height: 1.1; }
+h2 { font-size: 26px; margin-top: 34px; }
+h3 { font-size: 18px; margin-top: 18px; }
+p { margin: 0 0 14px 0; color: var(--text); }
+small, .muted { color: var(--muted); }
+
+/* Dividers */
+.hr {
+  height: 1px;
+  background: var(--line);
+  margin: 22px 0;
+}
+
+/* =========================================================
+   HERO (two columns)
+   ========================================================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 46px;
+  align-items: center;
+  padding: 56px 0 24px 0;
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
-  letter-spacing: 0.10em;
+  color: rgba(15,23,42,0.70);
+  margin-bottom: 12px;
 }
 
-/* ---- Navigation ---- */
-.daz-nav {
+.hero-kicker {
+  font-size: 18px;
+  color: rgba(15,23,42,0.78);
+  max-width: 680px;
+}
+
+.hero-actions {
+  margin-top: 18px;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.daz-nav a {
-  color: var(--navText);
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,0.14);
+  background: white;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 6px 22px rgba(2, 6, 23, 0.08);
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.btn:hover {
   text-decoration: none;
-  font-size: 13px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.03);
-  transition: background .15s ease, border-color .15s ease, color .15s ease;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+  border-color: rgba(15,23,42,0.22);
 }
 
-.daz-nav a:hover {
-  color: var(--navTextStrong);
-  border-color: rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.06);
+.btn.primary {
+  background: linear-gradient(135deg, rgba(43,108,255,0.92), rgba(14,165,233,0.86));
+  color: white;
+  border-color: rgba(255,255,255,0.10);
 }
 
-/* ---- Main content card ---- */
-.daz-main {
-  padding: 28px 0 56px;
-}
-
-.daz-page {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+.hero-media {
+  border-radius: 18px;
+  overflow: hidden;
   box-shadow: var(--shadow);
-  padding: 28px 28px;
+  border: 1px solid rgba(15,23,42,0.10);
+  background: #0b1220;
+  min-height: 320px;
+  position: relative;
 }
 
-.daz-page-title {
-  margin: 0 0 16px 0;
-  font-size: 24px;
-  letter-spacing: 0.2px;
-}
-
-.daz-content {
-  font-size: 15px;
-  color: #111827;
-}
-
-.daz-content h2 {
-  margin-top: 26px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
-}
-
-.daz-content h3 {
-  margin-top: 18px;
-}
-
-.daz-content hr {
-  border: none;
-  border-top: 1px solid var(--line);
-  margin: 22px 0;
-}
-
-.daz-content ul {
-  margin: 10px 0 18px 18px;
-}
-
-.daz-content li {
-  margin: 6px 0;
-}
-
-/* ---- Footer ---- */
-.daz-footer {
-  padding: 20px 0 40px;
-  color: #6b7280;
-  font-size: 13px;
-}
-
-.daz-footer-line {
-  border-top: 1px solid #e5e7eb;
-  padding-top: 14px;
-}
-
-/* ---- Responsive ---- */
-@media (max-width: 860px) {
-  .daz-hero-inner {
-    grid-template-columns: 1fr;
-  }
-  .daz-hero-logo {
-    height: 90px;
-  }
-  .daz-page {
-    padding: 20px;
-  }
-}
-
-/* ============================= */
-/* DAZ LOGO – PROFESSIONAL SIZE */
-/* ============================= */
-
-/* Header logo (compact, but readable) */
-.daz-logo{
-  height: 64px;     /* <- tu realnie powiększasz */
-  width: auto;
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  opacity: .95;
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,.28));
+  opacity: 0.92;
 }
 
-/* Mobile – bigger */
-@media (max-width: 768px){
-  .daz-logo{
-    height: 92px;   /* <- na telefonie ma być wyraźne */
-  }
+.hero-media .media-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px 260px at 20% 20%, rgba(43,108,255,0.35), transparent 60%),
+              linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.35));
+}
+
+/* =========================================================
+   Section blocks
+   ========================================================= */
+.section {
+  padding: 22px 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.section-title h2 {
+  margin: 0;
+}
+
+.section-note {
+  font-size: 13px;
+  color: rgba(71,85,105,0.85);
+}
+
+/* Two-column content blocks */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.cards-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid rgba(15,23,42,0.10);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  padding: 16px 16px 14px 16px;
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(15,23,42,0.88);
+}
+
+.card li { margin: 6px 0; }
+
+/* Lists */
+ul { margin: 10px 0 0 0; }
+li { color: rgba(15,23,42,0.90); }
+
+.pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.pill {
+  display: inline-flex;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,23,42,0.12);
+  background: rgba(255,255,255,0.70);
+  font-size: 13px;
+  color: rgba(15,23,42,0.85);
+}
+
+/* Contact block */
+.contact-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  background: white;
+  border: 1px solid rgba(15,23,42,0.10);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+.contact-block .k {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(71,85,105,0.80);
+  margin-bottom: 6px;
+}
+
+.contact-block .v {
+  font-weight: 650;
+  color: rgba(15,23,42,0.92);
+}
+
+.site-footer {
+  padding: 26px 0;
+  color: rgba(71,85,105,0.90);
+  border-top: 1px solid rgba(15,23,42,0.10);
+  background: rgba(255,255,255,0.55);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 980px) {
+  h1 { font-size: 36px; }
+  .hero { grid-template-columns: 1fr; padding-top: 36px; }
+  .hero-media { min-height: 240px; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .cards-4 { grid-template-columns: 1fr 1fr; }
+  .contact-block { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .nav a { padding: 9px 12px; border-radius: 12px; }
+  .cards-4 { grid-template-columns: 1fr; }
 }
