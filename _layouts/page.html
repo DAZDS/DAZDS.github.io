@@ -1,71 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>
-      {% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}
-    </title>
+  <title>
+    {% if page.title %}{{ page.title }} · {% endif %}{{ site.title | default: "DAZ Consulting DS" }}
+  </title>
 
-    <meta name="description" content="{{ site.description | default: 'Industrial EPC Advisory & Project Controls' }}" />
+  <meta name="description" content="{{ page.description | default: site.description | default: 'Industrial EPC advisory and project controls.' }}" />
 
-    <link rel="icon" href="{{ '/assets/img/logo-dazds.svg' | relative_url }}" type="image/svg+xml">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- System font stack is fine; keep Google fonts optional -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    {% seo %}
-  </head>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+</head>
 
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="{{ '/' | relative_url }}">
-          <img class="brand-logo" src="{{ '/assets/img/logo-dazds.svg' | relative_url }}" alt="DAZDS logo" />
-          <div class="brand-text">
-            <div class="brand-name">DAZ Consulting DS</div>
-            <div class="brand-sub">Industrial EPC Advisory · Project Controls</div>
-            <div class="brand-sub muted">DAZ Sentinel — a division of DAZ Consulting DS</div>
-          </div>
-        </a>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Go to home">
+        <!-- CEPS-like square logo (SVG). Replace later with your final file if you prefer -->
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 96 96" role="img">
+            <rect x="6" y="6" width="84" height="84" rx="6" fill="none" stroke="currentColor" stroke-width="4"/>
+            <!-- D (left) -->
+            <text x="22" y="58" font-size="34" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-weight="600" text-anchor="middle">D</text>
+            <!-- A (center) -->
+            <text x="48" y="58" font-size="34" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-weight="600" text-anchor="middle">A</text>
+            <!-- DS (right) -->
+            <text x="74" y="58" font-size="22" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-weight="600" text-anchor="middle">DS</text>
+          </svg>
+        </span>
 
-        <nav class="nav">
-          <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
-          <a class="nav-link {% if page.url contains '/services' %}active{% endif %}" href="{{ '/services/' | relative_url }}">Services</a>
-          <a class="nav-link {% if page.url contains '/writeups' %}active{% endif %}" href="{{ '/writeups/' | relative_url }}">Writeups</a>
-          <a class="nav-link {% if page.url contains '/articles' %}active{% endif %}" href="{{ '/articles/' | relative_url }}">Articles</a>
-          <a class="nav-link {% if page.url contains '/certifications' %}active{% endif %}" href="{{ '/certifications/' | relative_url }}">Certifications</a>
-          <a class="nav-link {% if page.url contains '/contact' %}active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
-        </nav>
+        <span class="brand__text">
+          <span class="brand__name">DAZ Consulting DS</span>
+          <span class="brand__tag">Industrial EPC Advisory · Project Controls</span>
+          <span class="brand__sub">DAZ Sentinel — a division of DAZ Consulting DS</span>
+        </span>
+      </a>
 
-        <!-- Search (site query via Google) -->
-        <form class="site-search" action="https://www.google.com/search" method="get" target="_blank" rel="noopener">
-          <input type="hidden" name="q" value="site:dazconsultingds.com" />
-          <input class="search-input" type="search" name="as_q" placeholder="Search…" aria-label="Search site" />
-          <button class="search-btn" type="submit" aria-label="Search">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M10 18a8 8 0 1 1 5.3-14a8 8 0 0 1 0 11.3A7.95 7.95 0 0 1 10 18m11 3l-6.2-6.2a10 10 0 1 0-1.4 1.4L19.6 22z"/>
-            </svg>
-          </button>
-        </form>
-      </div>
-    </header>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+        <a class="nav__link {% if page.url contains '/services' %}is-active{% endif %}" href="{{ '/services/' | relative_url }}">Services</a>
+        <a class="nav__link {% if page.url contains '/writeups' %}is-active{% endif %}" href="{{ '/writeups/' | relative_url }}">Writeups</a>
+        <a class="nav__link {% if page.url contains '/articles' %}is-active{% endif %}" href="{{ '/articles/' | relative_url }}">Articles</a>
+        <a class="nav__link {% if page.url contains '/certifications' %}is-active{% endif %}" href="{{ '/certifications/' | relative_url }}">Certifications</a>
+        <a class="nav__link {% if page.url contains '/contact' %}is-active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
+      </nav>
 
-    <main class="site-main">
+      <!-- Simple corporate search (site-restricted DuckDuckGo) -->
+      <form class="search" action="https://duckduckgo.com/" method="get" target="_blank" rel="noopener">
+        <input type="hidden" name="q" value="site:{{ site.url | default: 'dazconsultingds.com' }}" />
+        <label class="sr-only" for="q">Search</label>
+        <input id="q" name="q" class="search__input" type="search" placeholder="Search…" />
+        <button class="search__btn" type="submit" aria-label="Search">
+          <span aria-hidden="true">⌕</span>
+        </button>
+      </form>
+
+      <button class="burger" type="button" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
       {{ content }}
-    </main>
+    </div>
+  </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <div class="footer-brand">© {{ "now" | date: "%Y" }} DAZ Consulting DS · DAZ Sentinel</div>
-          <div class="footer-meta">NIP: 7491919844 · REGON: 242890153</div>
-        </div>
-        <div class="footer-right">
-          <a class="footer-link" href="mailto:damian.stepien@dazconsultingds.com">damian.stepien@dazconsultingds.com</a>
-          <span class="dot">·</span>
-          <a class="footer-link" href="tel:+48517776202">+48 517 776 202</a>
-        </div>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div>© {{ 'now' | date: '%Y' }} DAZ Consulting DS · DAZ Sentinel</div>
       </div>
-    </footer>
-  </body>
+      <div class="footer__right">
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Close mobile menu after clicking a link
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('.nav__link');
+      if (link) document.body.classList.remove('nav-open');
+    });
+  </script>
+</body>
 </html>
