@@ -5,66 +5,84 @@ permalink: /
 ---
 
 # DAZ Consulting DS  
-## Strategic Industrial Advisory
+## Industrial EPC Advisory & Project Controls
 
-Strategic Advisory for Industrial EPC Execution and Risk Control
----
-
-## About the Firm
-
-DAZ Consulting DS is an independent advisory practice operating at the intersection of industrial EPC delivery, project controls discipline, and cybersecurity governance.
-
-We work in environments where schedule integrity, operational continuity and asset protection define business survival.
-
-Our focus is not on checklists.  
-It is on embedding control structures that endure beyond commissioning and remain defensible under audit, dispute, or crisis.
+DAZ Consulting DS provides independent advisory services across the lifecycle of industrial EPC projects, aligned with recognised project management and project controls standards.
 
 ---
 
-## Strategic Focus
+## Firm Profile
 
-### Industrial EPC Governance  
-Integration of risk management and control structures across engineering, procurement and construction programmes.
+The practice operates in capital-intensive industrial environments where schedule integrity, cost performance, contractual compliance and operational readiness are critical to project success.
 
-### Project Controls & Risk Integrity  
-Schedule governance, cost discipline, critical path risk, and defensibility of delivery data.
+Advisory assignments focus on structured project governance, baseline development and control, integrated cost and schedule management, quantitative risk assessment and defensibility of delivery data throughout engineering, procurement, construction and commissioning phases.
 
-### OT / ICS Lifecycle Security  
-Security assurance engineered from FEED through commissioning and into operational environments.
+---
 
-### Adversarial Verification — DAZ Sentinel Division  
-Independent validation of exposure across hybrid IT/OT environments, translating findings into enforceable engineering and governance controls.
+## Core Areas of Practice
+
+### EPC Project Governance
+
+- Governance structures supporting execution across engineering, procurement and construction  
+- Contractual risk allocation analysis  
+- Integrated change control  
+- Interface management and stakeholder coordination  
+
+### Project Controls & Performance Management
+
+- Programme development and critical path integrity  
+- Baseline development, assessment and maintenance  
+- Earned Value Management (EVM)  
+- Schedule Risk Analysis (SRA)  
+- Cost estimating and cost forecasting  
+- Performance measurement and variance analysis  
+
+### Risk & Contractual Compliance
+
+- Structured risk identification and qualitative and quantitative risk analysis  
+- Risk register governance and mitigation tracking  
+- Impact assessment and scenario analysis  
+- Claims analysis and entitlement support  
+- Audit-ready documentation and traceability  
+
+### OT / ICS Governance in EPC Lifecycle
+
+- Alignment of control mechanisms from FEED through commissioning  
+- Contractor access governance and segregation of duties  
+- Operational readiness, turnover and handover governance  
+
+### DAZ Sentinel — Cybersecurity Division
+
+DAZ Sentinel operates as the specialist cybersecurity division of DAZ Consulting DS.
+
+Assignments include independent assessment of IT/OT exposure, validation of control effectiveness and alignment of technical findings with project governance, contractual structures and lifecycle controls.
 
 ---
 
 ## Engagement Structure
 
-DAZ Consulting DS structures engagements through a four-stage model:
+Advisory engagements follow a lifecycle-based control structure consistent with recognised project management standards:
 
-1. **Executive Framing** — definition of business-critical risk exposure  
-2. **Engineering Discovery** — architecture, controls and structural vulnerabilities  
-3. **Independent Verification** — validation of what is true, not what is declared  
-4. **Governance Embedding** — controls designed to persist beyond project closure  
+1. **Initiation & Stakeholder Alignment**  
+   Definition of project objectives, governance framework, performance criteria and contractual context.
 
-This model ensures continuity between advisory insight and operational reality.
+2. **Planning & Baseline Development**  
+   Review and validation of baseline documentation, including schedule, cost and resource baselines, control procedures and risk management plans.
+
+3. **Monitoring & Controlling**  
+   Evaluation of performance against approved baselines, including schedule variance, cost variance, earned value indicators, risk exposure and change control effectiveness.
+
+4. **Closing & Handover Governance**  
+   Structured oversight of completion requirements, interface closure, commissioning readiness and formal turnover into operations.
 
 ---
 
 ## Operating Environments
 
 Energy & Power  
-Petrochemicals  
-Industrial EPC  
-Critical Infrastructure Modernisation  
-
----
-
-## Institutional Position
-
-DAZ Consulting DS operates as a strategic advisory practice.  
-DAZ Sentinel functions as its specialist cybersecurity division.
-
-All services are delivered within a governance-first framework designed for environments where downtime, safety and integrity are non-negotiable.
+Petrochemical & Refining  
+Industrial Manufacturing  
+Infrastructure Modernisation  
 
 ---
 
