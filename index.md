@@ -84,7 +84,6 @@ permalink: /
         <li>Interface management and stakeholder coordination</li>
       </ul>
     </div>
-
     <div class="card">
       <h3>Project Controls &amp; Performance</h3>
       <ul>
@@ -96,7 +95,6 @@ permalink: /
         <li>Performance measurement and variance analysis</li>
       </ul>
     </div>
-
     <div class="card">
       <h3>Risk &amp; Contractual Compliance</h3>
       <ul>
@@ -107,7 +105,6 @@ permalink: /
         <li>Audit-ready documentation and traceability</li>
       </ul>
     </div>
-
     <div class="card">
       <h3>OT / ICS Governance in EPC</h3>
       <ul>
@@ -135,21 +132,18 @@ permalink: /
         Definition of business targets, delivery constraints, governance approach and critical risk exposure.
       </p>
     </div>
-
     <div class="card">
       <h3>2. Implementation Proof</h3>
       <p class="muted" style="margin:0;">
         Validation and analysis of baseline documents, reporting logic and control procedures used in execution.
       </p>
     </div>
-
     <div class="card">
       <h3>3. Target First</h3>
       <p class="muted" style="margin:0;">
         Ongoing performance evaluation: schedule, cost, risk and change — including opportunities and corrective actions.
       </p>
     </div>
-
     <div class="card">
       <h3>4. Responsible Completion</h3>
       <p class="muted" style="margin:0;">
@@ -195,7 +189,6 @@ permalink: /
         REGON: 242890153
       </div>
     </div>
-
     <div>
       <div class="k">Direct</div>
       <div class="v">+48 517 776 202</div>
