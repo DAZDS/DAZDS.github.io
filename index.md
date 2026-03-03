@@ -6,87 +6,77 @@ permalink: /
 
 <div class="hero">
   <div>
-    <div class="hero-label">WHO WE ARE</div>
+    <div class="kicker">Who we are</div>
     <h1>Industrial EPC Advisory &amp; Project Controls</h1>
-    <p class="hero-kicker">
-      DAZ Consulting DS provides independent advisory support across the lifecycle of industrial EPC delivery —
-      with focus on governance, baseline integrity, performance measurement, risk oversight and defensible project data.
+    <p class="lead">
+      DAZ Consulting DS provides independent advisory services across the lifecycle of industrial EPC delivery —
+      focused on baseline development and control, schedule integrity, cost performance, change control,
+      and risk and claims discipline.
     </p>
-
     <div class="hero-actions">
       <a class="btn primary" href="/services/">View Services</a>
       <a class="btn" href="/contact/">Contact</a>
     </div>
-
     <div class="pills">
       <span class="pill">Baseline &amp; Change Control</span>
       <span class="pill">Critical Path Integrity</span>
       <span class="pill">Cost &amp; Schedule Performance</span>
-      <span class="pill">Risk &amp; Claims Sensitivity</span>
-      <span class="pill">OT/ICS Governance</span>
+      <span class="pill">Risk &amp; Claims Discipline</span>
+      <span class="pill">Handover &amp; Turnover Readiness</span>
     </div>
   </div>
 
-  <div class="hero-media">
-    <!-- Podmień na swój obraz: assets/img/industrial-hero.jpg -->
-    <img src="/assets/img/industrial-hero.jpg" alt="Industrial EPC environment" />
-    <div class="media-overlay"></div>
-  </div>
-</div>
-
-<div class="hr"></div>
-
-<div class="section">
-  <div class="section-title">
-    <h2>Firm Profile</h2>
-    <div class="section-note">Independent advisory practice for capital-intensive delivery</div>
-  </div>
-
-  <div class="grid-2">
-    <div>
-      <p>
-        The practice operates in industrial environments where schedule integrity, cost performance,
-        contractual compliance and operational readiness are critical to project success.
-      </p>
-      <p>
-        Advisory assignments focus on structured governance, baseline development and control,
-        integrated cost and schedule management, qualitative and quantitative risk analysis,
-        and defensibility of delivery data throughout engineering, procurement, construction and commissioning phases.
-      </p>
-    </div>
-    <div>
-      <div class="card">
-        <h3>DAZ Sentinel — Cybersecurity Division</h3>
-        <p class="muted" style="margin:0;">
-          Specialist capability supporting OT/ICS governance across the EPC lifecycle,
-          including independent assessment of IT/OT exposure and validation of control effectiveness.
-        </p>
+  <aside class="hero-side">
+    <h3>Quick profile</h3>
+    <div class="kv">
+      <div class="kv-row">
+        <div class="kv-key">Focus</div>
+        <div class="kv-val">PMC advisory, project controls, delivery governance</div>
+      </div>
+      <div class="kv-row">
+        <div class="kv-key">Division</div>
+        <div class="kv-val">DAZ Sentinel — cybersecurity for hybrid IT/OT</div>
+      </div>
+      <div class="kv-row">
+        <div class="kv-key">Email</div>
+        <div class="kv-val">
+          <a href="mailto:damian.stepien@dazconsultingds.com">damian.stepien@dazconsultingds.com</a>
+        </div>
       </div>
     </div>
-  </div>
+  </aside>
 </div>
 
-<div class="hr"></div>
+<hr />
 
 <div class="section">
-  <div class="section-title">
-    <h2>Core Areas of Practice</h2>
-    <div class="section-note">Clear service lines, audit-ready approach</div>
-  </div>
+  <h2>Firm Profile</h2>
+  <p>
+    The practice operates in capital-intensive industrial environments where schedule integrity, cost performance,
+    contractual compliance and operational readiness are critical to project success.
+  </p>
+  <p>
+    Advisory assignments focus on structured project governance, baseline development and control, integrated cost and schedule management,
+    quantitative risk analysis, and defensibility of delivery data throughout engineering, procurement, construction and commissioning phases.
+  </p>
+</div>
 
-  <div class="cards-4">
+<div class="section">
+  <h2>Core Areas of Practice</h2>
+
+  <div class="grid-2">
     <div class="card">
-      <h3>EPC Project Governance</h3>
-      <ul>
-        <li>Governance structures aligned with best market practice</li>
+      <div class="card-title">EPC Project Governance</div>
+      <ul class="list-tight">
+        <li>Project governance structures aligned with best market practice</li>
         <li>Contractual risk allocation analysis</li>
         <li>Integrated change control</li>
         <li>Interface management and stakeholder coordination</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Project Controls &amp; Performance</h3>
-      <ul>
+      <div class="card-title">Project Controls &amp; Performance Management</div>
+      <ul class="list-tight">
         <li>Programme development and critical path integrity</li>
         <li>Baseline development, assessment and maintenance</li>
         <li>Earned Value Management (EVM)</li>
@@ -96,9 +86,9 @@ permalink: /
       </ul>
     </div>
     <div class="card">
-      <h3>Risk &amp; Contractual Compliance</h3>
-      <ul>
-        <li>Structured risk identification and qualitative/quantitative analysis</li>
+      <div class="card-title">Risk &amp; Contractual Compliance</div>
+      <ul class="list-tight">
+        <li>Structured risk identification and qualitative and quantitative risk analysis</li>
         <li>Risk register governance and mitigation tracking</li>
         <li>Impact assessment and scenario analysis</li>
         <li>Claims analysis and entitlement support</li>
@@ -106,94 +96,61 @@ permalink: /
       </ul>
     </div>
     <div class="card">
-      <h3>OT / ICS Governance in EPC</h3>
-      <ul>
+      <div class="card-title">OT / ICS Governance in EPC Lifecycle</div>
+      <ul class="list-tight">
         <li>Alignment of control mechanisms from FEED through commissioning</li>
         <li>Contractor access governance and segregation of duties</li>
         <li>Operational readiness, turnover and handover governance</li>
-        <li>Control effectiveness validation (DAZ Sentinel)</li>
       </ul>
     </div>
   </div>
-</div>
 
-<div class="hr"></div>
-
-<div class="section">
-  <div class="section-title">
-    <h2>Engagement Structure</h2>
-    <div class="section-note">Plain language, lifecycle-driven</div>
-  </div>
-
-  <div class="grid-2">
-    <div class="card">
-      <h3>1. Executive Framing</h3>
-      <p class="muted" style="margin:0;">
-        Definition of business targets, delivery constraints, governance approach and critical risk exposure.
-      </p>
-    </div>
-    <div class="card">
-      <h3>2. Implementation Proof</h3>
-      <p class="muted" style="margin:0;">
-        Validation and analysis of baseline documents, reporting logic and control procedures used in execution.
-      </p>
-    </div>
-    <div class="card">
-      <h3>3. Target First</h3>
-      <p class="muted" style="margin:0;">
-        Ongoing performance evaluation: schedule, cost, risk and change — including opportunities and corrective actions.
-      </p>
-    </div>
-    <div class="card">
-      <h3>4. Responsible Completion</h3>
-      <p class="muted" style="margin:0;">
-        Control of critical milestones, interfaces and turnover requirements for structured handover into operations.
-      </p>
-    </div>
+  <div class="card" style="margin-top:16px;">
+    <div class="card-title">DAZ Sentinel — Cybersecurity Division</div>
+    <p>
+      DAZ Sentinel operates as the specialist cybersecurity division of DAZ Consulting DS.
+      Assignments include independent assessment of hybrid IT/OT exposure.
+    </p>
   </div>
 </div>
 
-<div class="hr"></div>
+<div class="section">
+  <h2>Engagement Structure</h2>
+  <ol class="ol-steps">
+    <li><strong>Initiation &amp; Stakeholder Alignment</strong> — definition of objectives, governance framework, performance criteria and contractual context.</li>
+    <li><strong>Planning &amp; Baseline Development</strong> — review and validation of baseline documentation (schedule, cost, resources), control procedures and risk plans.</li>
+    <li><strong>Monitoring &amp; Controlling</strong> — performance evaluation against approved baselines: variance analysis, earned value indicators, risk exposure and change control effectiveness.</li>
+    <li><strong>Closing &amp; Handover Governance</strong> — oversight of completion requirements, interface closure, commissioning readiness and formal turnover into operations.</li>
+  </ol>
+</div>
 
 <div class="section">
-  <div class="section-title">
-    <h2>Operating Environments</h2>
-    <div class="section-note">Industrial + civil delivery contexts</div>
-  </div>
+  <h2>Operating Environments</h2>
 
-  <div class="pills">
-    <span class="pill">Energy &amp; Power</span>
-    <span class="pill">Petrochemical &amp; Refining</span>
-    <span class="pill">Mining</span>
-    <span class="pill">Pharmacy / Pharma</span>
-    <span class="pill">Industrial Manufacturing</span>
-    <span class="pill">Infrastructure Modernisation</span>
-    <span class="pill">Civil Construction — housing, retail, public facilities</span>
+  <div class="cards-4">
+    <div class="card"><div class="card-title">Energy &amp; Power</div><p>Generation, networks, critical utilities.</p></div>
+    <div class="card"><div class="card-title">Petrochemical &amp; Refining</div><p>Complex EPC delivery and turnaround governance.</p></div>
+    <div class="card"><div class="card-title">Mining</div><p>Industrial expansions, logistics, heavy infrastructure.</p></div>
+    <div class="card"><div class="card-title">Pharmaceutical</div><p>Quality-driven delivery, validation interface control.</p></div>
+    <div class="card"><div class="card-title">Industrial Manufacturing</div><p>Brownfield/greenfield upgrades and execution control.</p></div>
+    <div class="card"><div class="card-title">Infrastructure Modernisation</div><p>Critical assets, phased commissioning, constraints.</p></div>
+    <div class="card"><div class="card-title">Civil Construction</div><p>Residential, retail, and public-use facilities.</p></div>
+    <div class="card"><div class="card-title">Commercial Buildings</div><p>Shopping centres and complex multi-trade delivery.</p></div>
   </div>
 </div>
 
-<div class="hr"></div>
-
 <div class="section">
-  <div class="section-title">
-    <h2>Contact</h2>
-    <div class="section-note">Direct line, fast response</div>
-  </div>
+  <h2>Contact</h2>
 
-  <div class="contact-block">
-    <div>
-      <div class="k">DAZ Consulting DS</div>
-      <div class="v">Damian Stępień — Founder</div>
-      <div class="muted" style="margin-top:8px;">
-        NIP: 7491919844<br/>
-        REGON: 242890153
-      </div>
-    </div>
-    <div>
-      <div class="k">Direct</div>
-      <div class="v">+48 517 776 202</div>
-      <div class="k" style="margin-top:12px;">Email</div>
-      <div class="v"><a href="mailto:damian.stepien@dazconsultingds.com">damian.stepien@dazconsultingds.com</a></div>
-    </div>
+  <div class="card">
+    <p><strong>DAZ Consulting DS</strong><br/>
+    Damian Stępień<br/>
+    Founder</p>
+    <p class="small" style="margin-top:10px;">
+      NIP: 7491919844<br/>
+      REGON: 242890153<br/>
+      Direct: +48 517 776 202<br/>
+      Email: <a href="mailto:damian.stepien@dazconsultingds.com">damian.stepien@dazconsultingds.com</a>
+    </p>
   </div>
 </div>
