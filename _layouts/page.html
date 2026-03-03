@@ -1,54 +1,47 @@
-<!-- =======================================================
-     File: _layouts/page.html
-     ======================================================= -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
-    </title>
+
+    <title>{% if page.title %}{{ page.title }} · {% endif %}DAZ Consulting DS</title>
+
+    <meta name="description" content="Industrial EPC Advisory and Project Controls. Schedule integrity, cost performance, baseline control, risk and claims discipline across industrial delivery." />
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    <link rel="icon" href="{{ '/assets/img/logo-mark.svg' | relative_url }}" type="image/svg+xml" />
   </head>
 
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand-row">
-          <div class="brand-mark">
-            <!-- Jeśli masz logo w repo, podmień ścieżkę -->
-            <img src="{{ '/Logo_DAZ_WWW.png' | relative_url }}" alt="DAZ" />
-          </div>
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="{{ '/' | relative_url }}" aria-label="DAZ Consulting DS home">
+            <span class="brand-mark">
+              <img src="{{ '/assets/img/logo-mark.svg' | relative_url }}" alt="DAZ Consulting DS logo" />
+            </span>
+            <span class="brand-text">
+              <span class="brand-title">DAZ Consulting DS</span>
+              <span class="brand-subtitle">Industrial EPC Advisory · Project Controls</span>
+              <span class="brand-subline">DAZ Sentinel — a division of DAZ Consulting DS</span>
+            </span>
+          </a>
 
-          <div class="brand-titles">
-            <p class="brand-name">DAZ Consulting DS</p>
-            <p class="brand-sub">
-              Industrial EPC Advisory | Project Controls
-              <span style="opacity:.65;">&nbsp;·&nbsp;</span>
-              DAZ Sentinel — Cybersecurity Division
-            </p>
-          </div>
-        </div>
-
-        <div class="nav-row">
-          <nav class="nav">
-            {% assign url = page.url | downcase %}
-            <a href="{{ '/' | relative_url }}" class="{% if url == '/' %}active{% endif %}">Home</a>
-            <a href="{{ '/services/' | relative_url }}" class="{% if url contains '/services' %}active{% endif %}">Services</a>
-            <a href="{{ '/writeups/' | relative_url }}" class="{% if url contains '/writeups' %}active{% endif %}">Writeups</a>
-            <a href="{{ '/articles/' | relative_url }}" class="{% if url contains '/articles' %}active{% endif %}">Articles</a>
-            <a href="{{ '/certifications/' | relative_url }}" class="{% if url contains '/certifications' %}active{% endif %}">Certifications</a>
-            <a href="{{ '/contact/' | relative_url }}" class="{% if url contains '/contact' %}active{% endif %}">Contact</a>
+          <nav class="nav" aria-label="Primary navigation">
+            <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+            <a href="{{ '/services/' | relative_url }}" class="{% if page.url contains '/services' %}active{% endif %}">Services</a>
+            <a href="{{ '/writeups/' | relative_url }}" class="{% if page.url contains '/writeups' %}active{% endif %}">Writeups</a>
+            <a href="{{ '/articles/' | relative_url }}" class="{% if page.url contains '/articles' %}active{% endif %}">Articles</a>
+            <a href="{{ '/certifications/' | relative_url }}" class="{% if page.url contains '/certifications' %}active{% endif %}">Certifications</a>
+            <a href="{{ '/contact/' | relative_url }}" class="{% if page.url contains '/contact' %}active{% endif %}">Contact</a>
           </nav>
         </div>
       </div>
     </header>
 
-    <main class="site-main dots-bg">
-      <div class="container page-surface">
-        <div class="page">
+    <main class="site-main">
+      <div class="container">
+        <div class="page-card">
           {{ content }}
         </div>
       </div>
@@ -56,9 +49,15 @@
 
     <footer class="site-footer">
       <div class="container">
-        <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;">
-          <div>© {{ "now" | date: "%Y" }} DAZ Consulting DS · DAZ Sentinel</div>
-          <div class="muted">damian.stepien@dazconsultingds.com</div>
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div>© {{ site.time | date: '%Y' }} DAZ Consulting DS · DAZ Sentinel</div>
+            <small>NIP: 7491919844 · REGON: 242890153 · Email: <a href="mailto:damian.stepien@dazconsultingds.com">damian.stepien@dazconsultingds.com</a></small>
+          </div>
+          <div class="footer-right">
+            <a href="{{ '/services/' | relative_url }}">Services</a>
+            <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          </div>
         </div>
       </div>
     </footer>
