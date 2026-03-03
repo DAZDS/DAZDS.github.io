@@ -3,7 +3,7 @@ description: "Industrial EPC Advisory | Project Controls | Risk & Delivery Assur
 author: Damian A. Stępień
 
 baseurl: ""
-url: "https://dazds.github.io"
+url: "https://dazconsultingds.com/"
 
 markdown: kramdown
 permalink: /:categories/:title/
