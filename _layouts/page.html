@@ -12,7 +12,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- System font stack is fine; keep Google fonts optional -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
@@ -22,15 +21,11 @@
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="{{ '/' | relative_url }}" aria-label="Go to home">
-        <!-- CEPS-like square logo (SVG). Replace later with your final file if you prefer -->
         <span class="brand__mark" aria-hidden="true">
           <svg viewBox="0 0 96 96" role="img">
             <rect x="6" y="6" width="84" height="84" rx="6" fill="none" stroke="currentColor" stroke-width="4"/>
-            <!-- D (left) -->
             <text x="22" y="58" font-size="34" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-weight="600" text-anchor="middle">D</text>
-            <!-- A (center) -->
             <text x="48" y="58" font-size="34" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-weight="600" text-anchor="middle">A</text>
-            <!-- DS (right) -->
             <text x="74" y="58" font-size="22" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-weight="600" text-anchor="middle">DS</text>
           </svg>
         </span>
@@ -45,15 +40,11 @@
       <nav class="nav" aria-label="Primary">
         <a class="nav__link {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
         <a class="nav__link {% if page.url contains '/services' %}is-active{% endif %}" href="{{ '/services/' | relative_url }}">Services</a>
-        <a class="nav__link {% if page.url contains '/writeups' %}is-active{% endif %}" href="{{ '/knowledge-index/' | relative_url }}">Knowledge-index</a>
-        <a class="nav__link {% if page.url contains '/articles' %}is-active{% endif %}" href="{{ '/articles/' | relative_url }}">Articles</a>
-        <a class="nav__link {% if page.url contains '/certifications' %}is-active{% endif %}" href="{{ '/certifications/' | relative_url }}">Certifications</a>
+        <a class="nav__link {% if page.url contains '/knowledge-index' %}is-active{% endif %}" href="{{ '/knowledge-index/' | relative_url }}">Knowledge Index</a>
         <a class="nav__link {% if page.url contains '/contact' %}is-active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
       </nav>
 
-      <!-- Simple corporate search (site-restricted DuckDuckGo) -->
-      <form class="search" action="https://duckduckgo.com/" method="get" target="_blank" rel="noopener">
-        <input type="hidden" name="q" value="site:{{ site.url | default: 'dazconsultingds.com' }}" />
+      <form class="search" action="https://duckduckgo.com/" method="get" target="_blank" rel="noopener" onsubmit="this.q.value='site:{{ site.url | default: 'dazconsultingds.com' }} ' + this.q.value;">
         <label class="sr-only" for="q">Search</label>
         <input id="q" name="q" class="search__input" type="search" placeholder="Search…" />
         <button class="search__btn" type="submit" aria-label="Search">
@@ -61,7 +52,7 @@
         </button>
       </form>
 
-      <button class="burger" type="button" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -85,10 +76,30 @@
   </footer>
 
   <script>
-    // Close mobile menu after clicking a link
-    document.addEventListener('click', function (e) {
-      const link = e.target.closest('.nav__link');
-      if (link) document.body.classList.remove('nav-open');
+    document.addEventListener("DOMContentLoaded", function () {
+      const burger = document.querySelector(".burger");
+
+      if (burger) {
+        burger.addEventListener("click", function () {
+          const isOpen = document.body.classList.toggle("nav-open");
+          burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+
+      document.addEventListener("click", function (e) {
+        const link = e.target.closest(".nav__link");
+        if (link) {
+          document.body.classList.remove("nav-open");
+          if (burger) burger.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          document.body.classList.remove("nav-open");
+          if (burger) burger.setAttribute("aria-expanded", "false");
+        }
+      });
     });
   </script>
 </body>
