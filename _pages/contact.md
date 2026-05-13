@@ -36,7 +36,7 @@ permalink: /contact/
 
       <div class="qp__row">
         <div class="qp__k">Name</div>
-        <div class="qp__v">Damian Stępień</div>
+        <div class="qp__v">Damian A. Stępień</div>
       </div>
 
       <div class="qp__row">
@@ -147,7 +147,7 @@ permalink: /contact/
   <div class="leadbox">
     <p>
       <strong>DAZ Consulting DS</strong><br/>
-      Damian Stępień<br/>
+      Damian A. Stępień<br/>
       NIP: 7491919844 · REGON: 242890153<br/>
       Direct: <a href="tel:+48517776202">+48 517 776 202</a><br/>
       Email: <a href="mailto:damian.stepien@dazconsultingds.com">damian.stepien@dazconsultingds.com</a>
