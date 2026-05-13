@@ -66,12 +66,17 @@ This service establishes, audits or improves the project controls environment so
 
 ### Purpose
 
-When a project is delayed, disrupted or commercially exposed, management needs more than standard reporting. It needs forensic reconstruction of what happened, when it happened, who caused it and what consequences followed.
+In delayed and disputed EPC projects, the effectiveness of a claims strategy depends on more than contractual entitlement or forensic analysis. It depends on the ability of the engaged team to operate with discipline, flexibility, persistence and high technical competence over an extended period of pressure.
 
-This service provides evidence-based analysis for internal decision-making, negotiations, claims, expert opinions, mediation, arbitration or litigation preparation.
+A claims strategy is vulnerable to failure from both internal and external threats. Internally, fragmented documentation, inconsistent communication, weak coordination, delayed decisions, insufficient analytical discipline or loss of evidence can compromise the position of the organisation. Externally, contractors, vendors, counterparties, consultants and other third parties may influence the evidentiary record, challenge causation, disrupt negotiations or weaken the commercial leverage of the claim.
+
+This service supports the organisation in maintaining control over the claims process: structuring evidence, protecting causation logic, aligning technical and contractual arguments, coordinating the engaged team and converting disruption into a defensible, executable and commercially coherent claims strategy.
 
 ### What you receive
 
+- substantive validation of the claim submission against applicable guidelines and contractual requirements
+- preliminary assessment of entitlement, causation and evidentiary sufficiency
+- verification of claim completeness: notices, event description, chronology, affected obligations, supporting records and requested relief
 - forensic schedule analysis
 - delay event reconstruction
 - critical path impact assessment
@@ -87,7 +92,7 @@ This service provides evidence-based analysis for internal decision-making, nego
 
 ### Purpose
 
-Claims require more than legal argument. They require evidence, chronology, causation, technical logic, contractual alignment and financial quantification.
+Claims require more than legal argument. They require a coherent evidentiary record, reliable chronology, clear causation logic, technical substantiation, contractual alignment and defensible quantification of time and cost consequences.
 
 DAZ Consulting DS supports claim preparation and claim defence from the project controls, forensic analysis and project governance perspective.
 
@@ -108,20 +113,23 @@ DAZ Consulting DS supports claim preparation and claim defence from the project 
 
 ### Purpose
 
-Risk management in EPC and industrial projects must be connected to schedule, cost, scope, interfaces, contracting strategy, cybersecurity and decision governance. A risk register alone is not sufficient.
+Risk management in EPC and industrial projects must be connected to schedule, cost, scope, interfaces, contracting strategy and decision governance. A risk register alone is not sufficient.
 
 This service converts risk identification into management action and measurable control.
 
 ### What you receive
 
-- project risk management framework
-- risk register review or development
+- project risk management framework aligned with governance, reporting and decision gates
+- risk register review, validation or development
+- risk identification structure for packages, interfaces, disciplines and lifecycle phases
 - schedule-risk and cost-risk impact mapping
+- schedule risk analysis focused on critical path, near-critical path and float consumption
 - qualitative and quantitative risk assessment support
+- mitigation assessment covering feasibility, ownership, effectiveness and residual exposure
 - risk ownership and mitigation governance
-- interface risk analysis
-- executive risk dashboard structure
-- risk-based decision support for project boards
+- interface risk analysis across contractors, vendors, packages and project phases
+- executive risk dashboard and escalation model
+- risk-based decision support for project boards and steering committees
 
 ---
 
@@ -220,18 +228,17 @@ Exposure reduction for executives, project teams, site personnel and field opera
 
 ## Delivery Modes
 
-Services can be delivered as:
+Services can be delivered through:
 
-- advisory engagements
-- independent reviews
-- forensic analysis assignments
-- project recovery support
-- structured PMC programmes
-- project controls improvement programmes
-- claims and dispute-support work
-- OT / ICS security assessments
-- hybrid industrial cybersecurity programmes
-- executive briefings and decision-support workshops
+- strategic advisory engagements for Owners, investors and executive teams
+- independent reviews of project governance, schedule, cost, risk and controls
+- forensic schedule, cost and claims analysis assignments
+- project recovery and performance improvement programmes
+- structured PMC, project governance and project controls support
+- claims preparation, claim defence and dispute-support work
+- OT / ICS security assessments, governance reviews and validation exercises
+- hybrid IT / OT cybersecurity advisory and assurance programmes
+- executive briefings, decision-support workshops and board-level reporting
 
 ---
 
