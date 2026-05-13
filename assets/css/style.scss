@@ -1,129 +1,35 @@
----
----
+/* =========================================================
+   DAZ Consulting DS — Final UI Corrections
+   Logo readability + Hero proportions + Mobile stability
+   ========================================================= */
 
-/* =========================
-   DAZ Consulting DS — Corporate UI
-   Responsive Stable Version
-   ========================= */
-
-:root{
-  --navy-950:#071225;
-  --navy-900:#0a1730;
-  --navy-800:#0f2142;
-
-  --ink:#0b1220;
-  --muted:#51607a;
-
-  --bg:#f4f6fa;
-  --paper:#ffffff;
-
-  --line:rgba(12, 22, 40, 0.10);
-  --shadow: 0 18px 50px rgba(6, 12, 24, 0.10);
-
-  --radius:18px;
-  --radius-sm:12px;
-
-  --brand:#0b2a6f;
-  --brand-2:#103a9b;
-  --accent:#0b2a6f;
-
-  --max:1100px;
+/* Accessibility helper used in layout */
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0, 0, 0, 0);
+  white-space:nowrap;
+  border:0;
 }
 
-/* =========================
-   Base
-   ========================= */
-
-*,
-*::before,
-*::after{
-  box-sizing:border-box;
-}
-
-html,
-body{
-  min-height:100%;
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
-}
-
-body{
-  margin:0;
-  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.5;
-}
-
-img,
-svg,
-video{
-  max-width:100%;
-  height:auto;
-}
-
-a{
-  color:var(--brand);
-  text-decoration:none;
-}
-
-a:hover{
-  color:var(--brand-2);
-}
-
-.container{
-  width:min(var(--max), calc(100% - 40px));
-  margin-inline:auto;
-}
-
-/* =========================
-   Topbar / Header
-   ========================= */
-
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:40;
-  color:#eaf0ff;
-  background:
-    radial-gradient(
-      1200px 500px at 20% 20%,
-      #132a52 0%,
-      var(--navy-950) 55%,
-      #050c1b 100%
-    );
-  border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.topbar__inner{
-  min-height:96px;
-  display:grid;
-  grid-template-columns:minmax(230px, 280px) minmax(0, 1fr) minmax(220px, 300px);
-  gap:22px;
-  align-items:center;
-  padding:18px 0;
-}
-
-/* =========================
-   Brand
-   ========================= */
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  min-width:0;
-  color:#eaf0ff;
-}
+/* ---------- Header logo readability ---------- */
 
 .brand__mark{
   flex:0 0 54px;
   width:54px;
   height:54px;
-  color:#eaf0ff;
-  opacity:.95;
   display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#f8fbff;
+  opacity:1;
+  padding:4px;
+  border-radius:10px;
+  background:rgba(255,255,255,0.045);
 }
 
 .brand__mark svg{
@@ -132,468 +38,133 @@ a:hover{
   display:block;
 }
 
-.brand__text{
-  min-width:0;
-  line-height:1.1;
+.brand__mark svg text{
+  fill:currentColor !important;
 }
 
+.brand__mark svg rect{
+  stroke:currentColor !important;
+}
+
+/* Make brand name more visible on dark background */
 .brand__name{
-  display:block;
-  max-width:220px;
+  color:#2f6df6;
   font-weight:800;
-  font-size:18px;
-  line-height:1.05;
-  letter-spacing:.2px;
-  color:#174aa8;
-  overflow-wrap:normal;
-  word-break:normal;
 }
 
 .brand__tag{
-  display:block;
-  margin-top:6px;
-  max-width:220px;
-  color:rgba(234,240,255,0.88);
-  font-size:13px;
-  line-height:1.18;
-  font-weight:700;
+  color:rgba(248,251,255,0.92);
 }
 
 .brand__sub{
-  display:block;
-  margin-top:5px;
-  max-width:220px;
-  color:rgba(234,240,255,0.64);
-  font-size:12px;
-  line-height:1.18;
+  color:rgba(248,251,255,0.70);
 }
 
-/* =========================
-   Navigation
-   ========================= */
+/* ---------- Header balance ---------- */
+
+.topbar__inner{
+  grid-template-columns:minmax(260px, 300px) minmax(0, 1fr) minmax(240px, 300px);
+}
 
 .nav{
-  display:flex;
-  align-items:center;
   justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  min-width:0;
 }
 
 .nav__link{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:40px;
-  padding:10px 15px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.10);
-  background:rgba(255,255,255,0.06);
-  color:rgba(234,240,255,0.88);
-  backdrop-filter:blur(6px);
+  min-height:38px;
+  padding:9px 15px;
   font-size:14px;
-  line-height:1;
-  font-weight:700;
-  white-space:nowrap;
 }
-
-.nav__link:hover{
-  background:rgba(255,255,255,0.10);
-  border-color:rgba(255,255,255,0.16);
-  color:#fff;
-}
-
-.nav__link.is-active{
-  background:rgba(255,255,255,0.16);
-  border-color:rgba(255,255,255,0.22);
-  color:#fff;
-}
-
-/* =========================
-   Search
-   ========================= */
 
 .search{
-  width:100%;
   max-width:300px;
-  justify-self:end;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 10px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.06);
 }
 
-.search__input{
-  width:100%;
-  min-width:0;
-  border:0;
-  outline:none;
-  background:transparent;
-  color:#fff;
-  font-size:14px;
-}
-
-.search__input::placeholder{
-  color:rgba(255,255,255,0.65);
-}
-
-.search__btn{
-  flex:0 0 auto;
-  border:0;
-  background:transparent;
-  color:rgba(255,255,255,0.90);
-  cursor:pointer;
-  font-size:16px;
-  padding:4px 8px;
-  border-radius:10px;
-}
-
-.search__btn:hover{
-  background:rgba(255,255,255,0.10);
-}
-
-/* =========================
-   Burger
-   ========================= */
-
-.burger{
-  display:none;
-  width:44px;
-  height:44px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.06);
-  cursor:pointer;
-}
-
-.burger span{
-  display:block;
-  width:18px;
-  height:2px;
-  background:rgba(255,255,255,0.85);
-  margin:5px auto;
-  border-radius:99px;
-}
-
-/* =========================
-   Main
-   ========================= */
-
-.main{
-  padding:34px 0 60px;
-  background:
-    radial-gradient(
-      circle at 1px 1px,
-      rgba(12,22,40,0.12) 1px,
-      transparent 1px
-    ) 0 0 / 28px 28px;
-}
-
-.card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-}
-
-.section{
-  margin:28px 0;
-}
-
-.section h2{
-  margin:0 0 16px;
-  font-size:34px;
-  line-height:1.08;
-  letter-spacing:-0.6px;
-}
-
-.kicker{
-  font-size:12px;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  color:rgba(12,22,40,0.55);
-  font-weight:800;
-}
-
-/* =========================
-   Hero
-   ========================= */
+/* ---------- Hero proportions ---------- */
 
 .hero{
-  padding:38px;
+  padding:36px 38px;
 }
 
 .hero__grid{
-  display:grid;
-  grid-template-columns:minmax(0, 1.25fr) minmax(300px, .85fr);
-  gap:clamp(24px, 5vw, 72px);
+  grid-template-columns:minmax(0, 1.15fr) minmax(320px, .85fr);
+  gap:clamp(28px, 5vw, 64px);
   align-items:start;
 }
 
 .hero h1{
-  margin:10px 0 14px;
-  max-width:760px;
-  font-size:clamp(44px, 5vw, 58px);
-  line-height:1.02;
-  letter-spacing:-1.5px;
+  margin:10px 0 16px;
+  max-width:720px;
+  font-size:clamp(38px, 4.2vw, 50px);
+  line-height:1.04;
+  letter-spacing:-1.15px;
 }
 
 .hero__lead{
-  max-width:62ch;
+  max-width:58ch;
   font-size:18px;
   line-height:1.55;
-  color:rgba(12,22,40,0.72);
 }
 
-.hero__actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:20px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:46px;
-  padding:12px 18px;
-  border-radius:999px;
-  border:1px solid rgba(12,22,40,0.14);
-  background:#fff;
-  color:var(--ink);
-  font-weight:800;
-  line-height:1;
-  white-space:nowrap;
-}
-
-.btn:hover{
-  border-color:rgba(12,22,40,0.22);
-}
-
-.btn--primary{
-  background:var(--brand);
-  border-color:transparent;
-  color:#fff;
-}
-
-.btn--primary:hover{
-  background:var(--brand-2);
-  color:#fff;
-}
-
-/* =========================
-   Pills
-   ========================= */
-
-.pills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:18px;
-}
-
-.pill{
-  display:inline-flex;
-  align-items:center;
-  max-width:100%;
-  padding:8px 12px;
-  border-radius:999px;
-  border:1px solid rgba(12,22,40,0.12);
-  background:rgba(255,255,255,0.85);
-  color:rgba(12,22,40,0.78);
-  font-size:13px;
-  line-height:1.2;
-  font-weight:700;
-  white-space:normal;
-}
-
-/* =========================
-   Quick Profile
-   ========================= */
+/* ---------- Quick profile refinement ---------- */
 
 .qp{
-  width:100%;
-  min-width:0;
+  max-width:390px;
+  justify-self:end;
   padding:20px;
-  border-radius:var(--radius);
-  border:1px solid var(--line);
-  background:
-    linear-gradient(
-      180deg,
-      rgba(11,42,111,0.06),
-      rgba(255,255,255,0.90)
-    );
 }
 
 .qp h3{
-  margin:0 0 14px;
   font-size:18px;
-  line-height:1.2;
+  margin-bottom:14px;
 }
 
 .qp__row{
-  display:grid;
-  grid-template-columns:110px minmax(0, 1fr);
+  grid-template-columns:100px minmax(0, 1fr);
   gap:12px;
-  padding:12px 0;
-  border-top:1px solid rgba(12,22,40,0.10);
-}
-
-.qp__row:first-of-type{
-  border-top:0;
-  padding-top:0;
-}
-
-.qp__k{
-  font-size:12px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:rgba(12,22,40,0.55);
-  font-weight:800;
 }
 
 .qp__v{
-  min-width:0;
-  color:rgba(12,22,40,0.88);
-  font-size:16px;
-  line-height:1.35;
-  font-weight:800;
   overflow-wrap:anywhere;
+  word-break:normal;
 }
 
-.qp__v a{
-  font-weight:800;
+/* ---------- Section typography ---------- */
+
+.section h2{
+  font-size:clamp(28px, 3vw, 34px);
 }
 
-/* =========================
-   Generic grids
-   ========================= */
-
-.cards-2{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0, 1fr));
-  gap:22px;
-}
-
-.cards-4{
-  display:grid;
-  grid-template-columns:repeat(4, minmax(0, 1fr));
-  gap:18px;
-}
-
-.env__grid,
-.flow__grid{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0, 1fr));
-  gap:22px;
-}
-
-/* =========================
-   Responsive — wide tablet
-   ========================= */
+/* ---------- Tablet correction ---------- */
 
 @media (max-width:1180px){
 
   .topbar__inner{
-    grid-template-columns:minmax(210px, 260px) minmax(0, 1fr) minmax(190px, 240px);
+    grid-template-columns:minmax(240px, 280px) minmax(0, 1fr) minmax(220px, 260px);
     gap:16px;
   }
 
-  .nav__link{
-    padding:9px 13px;
-    font-size:13px;
+  .hero h1{
+    font-size:clamp(38px, 4.8vw, 48px);
   }
 
   .search{
-    max-width:240px;
-  }
-
-  .brand__name{
-    font-size:17px;
+    max-width:260px;
   }
 }
 
-/* =========================
-   Responsive — tablet / burger
-   ========================= */
+/* ---------- Burger breakpoint ---------- */
 
 @media (max-width:980px){
 
   .topbar__inner{
-    position:relative;
     grid-template-columns:minmax(0, 1fr) auto;
-    gap:14px;
-    min-height:82px;
-    padding:14px 0;
-  }
-
-  .brand{
-    min-width:0;
   }
 
   .brand__mark{
-    flex-basis:46px;
-    width:46px;
-    height:46px;
-  }
-
-  .brand__name{
-    max-width:none;
-    font-size:18px;
-  }
-
-  .brand__tag{
-    max-width:none;
-    font-size:12px;
-  }
-
-  .brand__sub{
-    max-width:none;
-    font-size:11px;
-  }
-
-  .search{
-    display:none;
-  }
-
-  .burger{
-    display:block;
-  }
-
-  .nav{
-    display:none;
-  }
-
-  body.nav-open .nav{
-    position:absolute;
-    left:0;
-    right:0;
-    top:calc(100% + 10px);
-    z-index:50;
-
-    display:flex;
-    justify-content:flex-start;
-    align-items:flex-start;
-    flex-wrap:wrap;
-    gap:8px;
-
-    padding:12px;
-    border-radius:18px;
-    border:1px solid rgba(255,255,255,0.12);
-    background:rgba(7,18,37,0.96);
-    box-shadow:0 18px 50px rgba(0,0,0,0.30);
-  }
-
-  .nav__link{
-    min-height:38px;
-    padding:9px 13px;
-    font-size:13px;
-    backdrop-filter:none;
+    flex-basis:48px;
+    width:48px;
+    height:48px;
   }
 
   .hero__grid{
@@ -601,40 +172,19 @@ a:hover{
   }
 
   .hero h1{
-    font-size:clamp(40px, 8vw, 52px);
+    max-width:760px;
+    font-size:clamp(36px, 7vw, 46px);
   }
 
   .qp{
     max-width:none;
-  }
-
-  .cards-4{
-    grid-template-columns:repeat(2, minmax(0, 1fr));
+    justify-self:stretch;
   }
 }
 
-/* =========================
-   Responsive — phone
-   ========================= */
+/* ---------- Phone correction ---------- */
 
 @media (max-width:560px){
-
-  .container{
-    width:calc(100% - 28px);
-  }
-
-  .topbar{
-    position:sticky;
-  }
-
-  .topbar__inner{
-    min-height:72px;
-    padding:12px 0;
-  }
-
-  .brand{
-    gap:10px;
-  }
 
   .brand__mark{
     display:none;
@@ -647,66 +197,27 @@ a:hover{
 
   .brand__tag{
     display:block;
-    margin-top:5px;
+    max-width:260px;
     font-size:12px;
-    line-height:1.18;
   }
 
   .brand__sub{
     display:none;
   }
 
-  body.nav-open .nav{
-    top:calc(100% + 8px);
-    max-height:calc(100vh - 96px);
-    overflow:auto;
-  }
-
-  .nav__link{
-    width:100%;
-    justify-content:flex-start;
-    font-size:13px;
-    padding:11px 13px;
-  }
-
-  .main{
-    padding:22px 0 44px;
-  }
-
   .hero{
     padding:22px;
-    border-radius:16px;
   }
 
   .hero h1{
-    margin-top:8px;
-    font-size:clamp(34px, 11vw, 44px);
-    line-height:1.05;
-    letter-spacing:-1px;
+    font-size:clamp(32px, 10vw, 40px);
+    line-height:1.06;
+    letter-spacing:-0.9px;
   }
 
   .hero__lead{
+    max-width:none;
     font-size:16px;
-    line-height:1.5;
-  }
-
-  .hero__actions{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .btn{
-    width:100%;
-  }
-
-  .pills{
-    gap:8px;
-  }
-
-  .pill{
-    font-size:12px;
-    line-height:1.25;
-    padding:7px 10px;
   }
 
   .qp{
@@ -715,42 +226,15 @@ a:hover{
 
   .qp__row{
     grid-template-columns:1fr;
-    gap:5px;
-    padding:11px 0;
-  }
-
-  .qp__v{
-    font-size:15px;
-  }
-
-  .section h2{
-    font-size:28px;
-  }
-
-  .cards-2,
-  .cards-4,
-  .env__grid,
-  .flow__grid{
-    grid-template-columns:1fr;
   }
 }
 
-/* =========================
-   Responsive — very small phones
-   ========================= */
+/* ---------- Very small phones ---------- */
 
 @media (max-width:380px){
 
-  .container{
-    width:calc(100% - 22px);
-  }
-
-  .hero{
-    padding:20px 16px;
-  }
-
   .hero h1{
-    font-size:32px;
+    font-size:31px;
   }
 
   .brand__name{
@@ -759,10 +243,5 @@ a:hover{
 
   .brand__tag{
     font-size:11px;
-  }
-
-  .burger{
-    width:40px;
-    height:40px;
   }
 }
