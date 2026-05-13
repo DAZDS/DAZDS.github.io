@@ -45,7 +45,7 @@
       <nav class="nav" aria-label="Primary">
         <a class="nav__link {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
         <a class="nav__link {% if page.url contains '/services' %}is-active{% endif %}" href="{{ '/services/' | relative_url }}">Services</a>
-        <a class="nav__link {% if page.url contains '/writeups' %}is-active{% endif %}" href="{{ '/writeups/' | relative_url }}">Writeups</a>
+        <a class="nav__link {% if page.url contains '/writeups' %}is-active{% endif %}" href="{{ '/knowledge-index/' | relative_url }}">Knowledge-index</a>
         <a class="nav__link {% if page.url contains '/articles' %}is-active{% endif %}" href="{{ '/articles/' | relative_url }}">Articles</a>
         <a class="nav__link {% if page.url contains '/certifications' %}is-active{% endif %}" href="{{ '/certifications/' | relative_url }}">Certifications</a>
         <a class="nav__link {% if page.url contains '/contact' %}is-active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
